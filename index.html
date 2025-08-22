@@ -1,0 +1,362 @@
+<!DOCTYPE html> <!-- HTML5 doctype -->
+<html lang="en"> <!-- Document language -->
+
+<head>
+  <meta charset="utf-8" /> <!-- Unicode encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive scaling -->
+  <title>Mehdimuz — Space Engineering</title> <!-- Browser tab title -->
+
+  <!-- SEO description for search engines -->
+  <meta name="description"
+    content="Research portfolio of Dr. Mehdi Muzaffari, PhD candidate in Aerospace Engineering: guidance, dynamics & control, space systems, and aero modeling." />
+
+  <!-- Inter font from Google Fonts (optimize connection first) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Project stylesheet and favicon -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Skip link for keyboard/screen-reader users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Brand -->
+      <a class="brand" href="#">
+        <span class="brand-text">Mehdi&nbsp;Muzaffari</span>
+        <span class="brand-sub">Space Engineering </span>
+      </a>
+
+      <!-- Mobile nav toggle (CSS-only checkbox hack) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span></span><span></span><span></span> <!-- Hamburger lines -->
+      </label>
+
+      <!-- Primary navigation -->
+      <nav class="site-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="button button-outline" href="Muzaffari_CV.pdf">Download CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main landmark for accessibility targets -->
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <!-- Hero text -->
+        <div class="hero-copy">
+          <h1>Engineering Precision Beyond Earth</h1>
+          <p class="lead">
+            I’m <strong>Mehdi Muzaffari</strong>, my research spans <em>spacecraft systems engineering</em>,
+            <em>orbit mechanics</em>, and <em>AI-assisted modeling</em> for resilient autonomous spacecraft.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#research">Explore Research</a>
+            <a class="button button-ghost" href="#projects">View Projects</a>
+          </div>
+        </div>
+
+        <!-- Hero visual (Earth image) -->
+        <!--////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <div class="earth-container">
+          <img src="images/earth3.png" alt="image of earth">
+        </div>
+        <!-- Optional alternative hero figure (currently disabled) -->
+        <!-- <figure class="hero-visual">
+          <img src="images/earth.png" alt="Abstract spacecraft and orbital paths" loading="eager" decoding="async">
+        </figure> -->
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="container grid grid-2">
+        <div>
+          <h2>About</h2>
+          <p>
+            I investigate control architectures and estimation pipelines for satellites and
+            deep-space probes. I’m passionate about bridging rigorous dynamics with real-time
+            software, using tools like cFS, Python, and modern control to deliver flight-ready systems.
+          </p>
+          <!-- Quick capability tags -->
+          <ul class="tags">
+            <li>ADCS</li>
+            <li>Orbit Determination</li>
+            <li>Robust Control</li>
+            <li>cFS</li>
+            <li>AI for Aero</li>
+          </ul>
+        </div>
+
+        <!-- “At a glance” sidebar card -->
+        <aside class="card">
+          <h3>At a glance</h3>
+          <ul class="meta">
+            <li><span>Program</span><strong>Space Engineering</strong></li>
+            <li><span>Focus</span><strong>Space Systems</strong></li>
+            <li><span>Lab</span><strong>Spacecraft & Space Robotics</strong></li>
+            <li><span>Email</span><a href="mailto:mehdi@example.edu">mehdimuzaffari@gmail.com</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Research Areas ===== -->
+    <section id="research" class="section alt">
+      <div class="container">
+        <h2>Research Areas</h2>
+
+        <!-- Three research cards -->
+        <div class="cards">
+          <!-- Area 1 -->
+          <article class="card research-card">
+            <div class="card-header">
+              <h3>Attitude Determination & Control</h3>
+              <span class="pill">ADCS</span>
+            </div>
+            <p>
+              Observer-based control with reaction wheels and magnetorquers, quaternion feedback,
+              and momentum management under power/thermal constraints.
+            </p>
+            <ul class="bullets">
+              <li>EKF/UKF for rate &amp; attitude</li>
+              <li>RW desaturation strategies</li>
+              <li>On-orbit system ID</li>
+            </ul>
+            <a class="card-link" href="#projects" aria-label="See related projects">Related projects →</a>
+          </article>
+
+          <!-- Area 2 -->
+          <article class="card research-card">
+            <div class="card-header">
+              <h3>Orbit Estimation & Navigation</h3>
+              <span class="pill">OD</span>
+            </div>
+            <p>
+              High-fidelity propagation and measurement modeling for LEO-GEO; filters fusing GNSS,
+              star-tracker and ground-based angles for robust navigation.
+            </p>
+            <ul class="bullets">
+              <li>Batch least squares, EKF</li>
+              <li>SRP &amp; J2 perturbations</li>
+              <li>Angles-only navigation</li>
+            </ul>
+            <a class="card-link" href="#publications">See publications →</a>
+          </article>
+
+          <!-- Area 3 -->
+          <article class="card research-card">
+            <div class="card-header">
+              <h3>Learning for Aero & Space</h3>
+              <span class="pill">ML</span>
+            </div>
+            <p>
+              Physics-informed networks and residual learning for aerodynamic modeling, fault
+              detection, and on-board decision-making.
+            </p>
+            <ul class="bullets">
+              <li>PINNs &amp; hybrid models</li>
+              <li>Anomaly detection</li>
+              <li>On-board inference</li>
+            </ul>
+            <a class="card-link" href="#projects">Explore demos →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects / Demos ===== -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2>Projects & Demos</h2>
+
+        <!-- Three project cards -->
+        <div class="cards">
+          <article class="card project-card">
+            <img src="images/adcs.png" alt="ADCS simulation dashboard" loading="lazy">
+            <div class="card-body">
+              <h3>Open-Source CubeSat ADCS</h3>
+              <p>cFS-integrated ADCS stack with EKF attitude estimation and quaternion control.</p>
+              <div class="chip-row">
+                <span class="chip">cFS</span><span class="chip">C/C++</span><span class="chip">Python</span>
+              </div>
+              <a class="card-link" href="#">Repository →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <img src="images/angles.png" alt="Orbit propagation plot" loading="lazy">
+            <div class="card-body">
+              <h3>Angles-Only Navigation</h3>
+              <p>LEO navigation pipeline fusing ground angles and star-tracker centroids.</p>
+              <div class="chip-row">
+                <span class="chip">EKF</span><span class="chip">Astrodynamics</span><span class="chip">NumPy</span>
+              </div>
+              <a class="card-link" href="#">Paper →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <img src="images/cfd.png" alt="Physics-informed network visualization" loading="lazy">
+            <div class="card-body">
+              <h3>PINNs for Aero Coefficients</h3>
+              <p>Hybrid models blending CFD priors with residual learning for lift/drag estimates.</p>
+              <div class="chip-row">
+                <span class="chip">PyTorch</span><span class="chip">CFD</span><span class="chip">ML</span>
+              </div>
+              <a class="card-link" href="#">Demo →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Publications ===== -->
+    <section id="publications" class="section">
+      <div class="container">
+        <h2>Forthcoming Publications</h2>
+        <ol class="pubs">
+          <li>
+            Muzaffari, M., et al. “Machine Learning for On-Orbit Anomaly Detection.”
+            <em><span class="highlight-blue">In progress</span>.</em>
+          </li>
+          <li>
+            Muzaffari, M., et al. “Hybrid Navigation Filters for Deep-Space SmallSats.”
+            <em><span class="highlight-blue">In progress</span>.</em>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Teaching ===== -->
+    <section id="teaching" class="section">
+      <div class="container">
+        <h2>Teaching & Mentorship</h2>
+        <ul class="timeline">
+          <li>
+            <span class="time">2025</span>
+            <div class="entry">
+              <h3>Spacecraft Dynamics (TA)</h3>
+              <p>Led MATLAB recitations: rigid body dynamics, attitude kinematics, and control.</p>
+            </div>
+          </li>
+          <li>
+            <span class="time">2024</span>
+            <div class="entry">
+              <h3>Dynamic Systems (TA)</h3>
+              <p>Led MATLAB/Simulink recitations: system modeling, transfer functions, and frequency response.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="contact-center">
+          <h2>Get in touch</h2>
+          <!-- Social/contact icon row -->
+          <ul class="contact-icons">
+            <li>
+              <a href="mailto:mehdimuzaffari@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener"
+                aria-label="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mehdimuz" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/mehdimuz" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/mehdimuz" target="_blank" rel="noopener" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/mehdimuz" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional contact form (commented out) -->
+    <!--
+    <form class="card form" aria-labelledby="contactTitle">
+      <h3 id="contactTitle">Contact Form</h3>
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" placeholder="Your name" required>
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" placeholder="your@email.com" required>
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
+      </label>
+      <button class="button" type="submit" aria-disabled="true" title="Demo only — add backend to enable">Send</button>
+      <p class="form-hint">This is a static demo form. Connect to a backend service to enable submissions.</p>
+    </form>
+    -->
+    <!-- </div> -->
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mehdi Muzaffari. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Minimal inline script to keep the year current -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+
+</html>
