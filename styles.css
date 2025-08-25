@@ -412,6 +412,7 @@ body {
 .contact-icons {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;      /* center icons horizontally */
   align-items: center;          /* align vertically */
   gap: 2rem;                    /* spacing between icons */
@@ -423,6 +424,7 @@ body {
   font-size: 4rem;              /* ≈64px on most browsers */
   color: var(--text);           /* default color */
   transition: color 0.2s ease, transform 0.2s ease;
+  max-width: 100%;
 }
 .contact-icons li a:hover {
   color: var(--brand);          /* highlight color on hover */
@@ -571,3 +573,20 @@ body {
    =========== */
 
    
+* { outline: 1px solid rgb(95, 60, 60); }
+
+
+section::after {
+  content: attr(id); /* shows the section’s ID */
+  position: absolute;
+  top: 0; left: 0;
+  background: rgba(255,0,0,0.8);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+section {
+  position: relative; /* so the ::after attaches inside */
+  outline: 1px solid red;
+}
+
