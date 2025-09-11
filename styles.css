@@ -603,3 +603,8 @@ body {
   object-fit: cover;        /* crop to fill nicely */
   display: block;
 }
+
+
+.research-card:first-child {
+  grid-column: 1 / -1;  /* span all 12 columns */
+}
