@@ -20,11 +20,17 @@ def style_axes(ax):
     ax.set_facecolor("black")
     ax.tick_params(colors="white")
     for spine in ax.spines.values():
-        spine.set_color("white")
+        spine.set_color("gray")
+        spine.set_alpha(0.3)        # 0 = invisible, 1 = solid
+    spine.set_linewidth(0.5)    # thinner line
     ax.xaxis.label.set_color("white")
     ax.yaxis.label.set_color("white")
     ax.title.set_color("white")
     ax.grid(True, color="gray", alpha=0.3)
+    
+    ax.grid(False)         # remove grid
+    ax.set_xticks([])      # remove x ticks
+    ax.set_yticks([])      # remove y ticks
 
 # --- Left: unit circle ---
 ax1.set_aspect('equal')
