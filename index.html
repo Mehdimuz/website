@@ -1,49 +1,64 @@
 <!DOCTYPE html> <!-- HTML5 doctype -->
-<html lang="en"> <!-- Document language -->
+<html lang="en">
 
 <head>
+  <!-- =========================
+       META & HEAD SETTINGS
+       ========================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ApexOrbital</title>
 
-  <!-- Prevent stale HTML -->
+  <title>ApexOrbital</title>
+  <meta name="description" content="Research portfolio of Mehdi Muzaffari, focusing on cinematic physics simulations and scientific storytelling." />
+
+  <!-- Cache busting to prevent stale files -->
   <meta http-equiv="Cache-Control" content="no-store, max-age=0">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <meta name="description" content="Research portfolio of Mehdi Muzaffari, PhD candidate in space engineering." />
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Add version to bust cache -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css?v=2025-08-25-1" />
   <link rel="icon" href="favicon.ico?v=2025-08-25-1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 
+
 <body>
-  <!-- Skip link for keyboard/screen-reader users -->
+
+  <!-- =========================
+       ACCESSIBILITY: SKIP LINK
+       Allows keyboard users to jump to main content
+       ========================= -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== Header / Nav ===== -->
+
+
+  <!-- =========================
+       HEADER / NAVIGATION
+       Sticky navigation bar with brand + links
+       ========================= -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <!-- Brand -->
+
+      <!-- Brand logo -->
       <a class="brand" href="#">
-        <img src="./images/logo.png?v=2025-08-25-1" alt="logo" class="brand-logo">
+        <img src="./images/logo.png?v=2025-08-25-1" alt="ApexOrbital logo" class="brand-logo">
         <span class="brand-text">ApexOrbital</span>
       </a>
 
-      <!-- Mobile nav toggle (CSS-only checkbox hack) -->
+      <!-- Mobile navigation toggle (checkbox hack) -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
       <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
-        <span></span><span></span><span></span> <!-- Hamburger lines -->
+        <span></span><span></span><span></span>
       </label>
 
-      <!-- Primary navigation -->
+      <!-- Primary navigation links -->
       <nav class="site-nav" role="navigation" aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
@@ -52,50 +67,71 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#teaching">Teaching</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a class="button button-outline" href="CV.pdf">Download CV</a></li>
+          <!-- <li><a class="button button-outline" href="CV.pdf" target="_blank">Download CV</a></li> -->
         </ul>
       </nav>
+
     </div>
   </header>
 
-  <!-- Main landmark for accessibility targets -->
+
+
+  <!-- =========================
+       MAIN CONTENT WRAPPER
+       ========================= -->
   <main id="main">
 
-    <!-- ===== Hero ===== -->
+
+
+    <!-- =========================
+         HERO SECTION
+         Intro statement + call-to-action + visual
+         ========================= -->
     <section class="hero">
       <div class="container hero-inner">
-        <!-- Hero text -->
+
+        <!-- Hero text content -->
         <div class="hero-copy">
           <h1>Where Physics Meets Imagination</h1>
+
           <p class="lead">
-            <em>ApexOrbital fuses programming, mathematics, and animation to bring the laws of physics to life, turning
-              abstract principles into intuitive visual experiences.
+            <em>
+              ApexOrbital fuses programming, mathematics, and animation to bring the laws of physics to life —
+              transforming differential equations into immersive visual storytelling.
             </em>
           </p>
+
           <div class="hero-actions">
             <a class="button" href="#research">Explore Research</a>
             <a class="button button-ghost" href="#projects">View Projects</a>
           </div>
         </div>
 
-        <!-- Hero visual (Earth image) -->
+        <!-- Hero visual -->
         <div class="earth-container">
-          <img src="images/earth3.png?v=2025-08-25-1" alt="image of earth">
+          <img src="images/earth3.png?v=2025-08-25-1" alt="Earth visualization">
         </div>
       </div>
     </section>
 
-    <!-- ===== About ===== -->
+
+
+    <!-- =========================
+         ABOUT SECTION
+         ========================= -->
     <section id="about" class="section">
       <div class="container grid grid-2">
+
+        <!-- About text -->
         <div>
           <h2>About</h2>
           <p>
-            I'm <strong>Mehdi Muzaffari</strong>, I investigate control and estimation systems for satellites and
-            deep-space probes,
-            fusing dynamics with real-time software to enable autonomous spaceflight.
+            I’m <strong>Mehdi Muzaffari</strong>, bringing physics to life through cinematic simulations —
+            transforming chaotic systems, differential equations, and mathematical structures
+            into intuitive visual experiences.
           </p>
-          <!-- Quick capability tags -->
+
+          <!-- Keyword tags -->
           <ul class="tags">
             <li>ADCS</li>
             <li>Orbit Determination</li>
@@ -105,138 +141,121 @@
           </ul>
         </div>
 
-        <!-- “At a glance” sidebar card -->
-        <aside class="card">
+        <!-- (Optional) Sidebar card -->
+        <!--
+        <aside class="card glance-card">
           <h3>At a glance</h3>
           <ul class="meta">
             <li><span>Program</span><strong>Space Engineering</strong></li>
             <li><span>Focus</span><strong>Space Systems</strong></li>
-            <li><span>Lab</span><strong>Spacecraft & Space Robotics</strong></li>
+            <li><span>Lab</span><strong>Space Robotics</strong></li>
             <li><span>Email</span><a href="mailto:mehdimuzaffari@gmail.com">mehdimuzaffari@gmail.com</a></li>
           </ul>
         </aside>
+        -->
+
       </div>
     </section>
 
-    <!-- ===== Research Areas ===== -->
+
+
+    <!-- =========================
+         RESEARCH AREAS
+         Dynamic attractor animations
+         ========================= -->
     <section id="research" class="section alt">
       <div class="container">
-        <h2>Research Areas</h2>
 
-        <!-- Three research cards -->
         <div class="cards">
-          <!-- Area 1 -->
-          <article class="card research-card">
-            <div class="card-header">
-              <!-- <h3>Attitude Determination & Control</h3> -->
-              <!-- <span class="pill">ADCS</span> -->
-            </div>
 
+          <!-- Research card: Attractor videos -->
+          <article class="research-card attractor-card">
             <div class="card-media">
-              <img src="anime3.gif" alt="anime3">
-            </div>
+              <video class="attractor-video" autoplay loop muted playsinline>
+                <source src="lorenz_attractor.mp4" type="video/mp4">
+              </video>
 
-            <!-- <p>
-              Observer-based control with reaction wheels and magnetorquers, quaternion feedback,
-              and momentum management under power/thermal constraints.
-            </p>
-            <ul class="bullets">
-              <li>EKF/UKF for rate &amp; attitude</li>
-              <li>RW desaturation strategies</li>
-              <li>On-orbit system ID</li>
-            </ul> -->
-            <!-- <a class="card-link" href="#projects" aria-label="See related projects">Related projects →</a> -->
+              <video class="attractor-video" autoplay loop muted playsinline>
+                <source src="rossler_attractor.mp4" type="video/mp4">
+              </video>
+            </div>
           </article>
 
-          <!-- Area 2 -->
-          <!-- <article class="card research-card">
-            <div class="card-header">
-              <h3>Orbit Estimation & Navigation</h3>
-              <span class="pill">OD</span>
-            </div>
-            <p>
-              High-fidelity propagation and measurement modeling for LEO-GEO; filters fusing GNSS,
-              star-tracker and ground-based angles for robust navigation.
-            </p>
-            <ul class="bullets">
-              <li>Batch least squares, EKF</li>
-              <li>SRP &amp; J2 perturbations</li>
-              <li>Angles-only navigation</li>
-            </ul>
-            <a class="card-link" href="#publications">See publications →</a>
-          </article> -->
-
-          <!-- Area 3 -->
-          <!-- <article class="card research-card">
-            <div class="card-header">
-              <h3>Learning for Aero & Space</h3>
-              <span class="pill">ML</span>
-            </div>
-            <p>
-              Physics-informed networks and residual learning for aerodynamic modeling, fault
-              detection, and on-board decision-making.
-            </p>
-            <ul class="bullets">
-              <li>PINNs &amp; hybrid models</li>
-              <li>Anomaly detection</li>
-              <li>On-board inference</li>
-            </ul>
-            <a class="card-link" href="#projects">Explore demos →</a>
-          </article> -->
         </div>
+
       </div>
     </section>
 
-    <!-- ===== Projects / Demos ===== -->
+
+
+    <!-- =========================
+         PROJECTS / DEMOS
+         ========================= -->
     <section id="projects" class="section alt">
       <div class="container">
         <h2>Projects & Demos</h2>
 
-        <!-- Three project cards -->
+        <!-- Project cards -->
         <div class="cards">
+
+          <!-- Project 1 -->
           <article class="card project-card">
             <img src="images/adcs.png" alt="ADCS simulation dashboard" loading="lazy">
             <div class="card-body">
               <h3>Open-Source CubeSat ADCS</h3>
               <p>cFS-integrated ADCS stack with EKF attitude estimation and quaternion control.</p>
               <div class="chip-row">
-                <span class="chip">cFS</span><span class="chip">C/C++</span><span class="chip">Python</span>
+                <span class="chip">cFS</span>
+                <span class="chip">C/C++</span>
+                <span class="chip">Python</span>
               </div>
               <a class="card-link" href="#">Explore →</a>
             </div>
           </article>
 
+          <!-- Project 2 -->
           <article class="card project-card">
             <img src="images/angles.png" alt="Orbit propagation plot" loading="lazy">
             <div class="card-body">
               <h3>Angles-Only Navigation</h3>
               <p>LEO navigation pipeline fusing ground angles and star-tracker centroids.</p>
               <div class="chip-row">
-                <span class="chip">EKF</span><span class="chip">Astrodynamics</span><span class="chip">NumPy</span>
+                <span class="chip">EKF</span>
+                <span class="chip">Astrodynamics</span>
+                <span class="chip">NumPy</span>
               </div>
               <a class="card-link" href="#">Explore →</a>
             </div>
           </article>
 
+          <!-- Project 3 -->
           <article class="card project-card">
             <img src="images/cfd.png" alt="Physics-informed network visualization" loading="lazy">
             <div class="card-body">
               <h3>PINNs for Aero Coefficients</h3>
-              <p>Hybrid models blending CFD priors with residual learning for lift/drag estimates.</p>
+              <p>Hybrid models blending CFD priors with residual learning for lift/drag estimation.</p>
               <div class="chip-row">
-                <span class="chip">PyTorch</span><span class="chip">CFD</span><span class="chip">ML</span>
+                <span class="chip">PyTorch</span>
+                <span class="chip">CFD</span>
+                <span class="chip">ML</span>
               </div>
               <a class="card-link" href="#">Explore →</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ===== Featured Publications ===== -->
+
+
+    <!-- =========================
+         PUBLICATIONS
+         ========================= -->
     <section id="publications" class="section">
       <div class="container">
         <h2>Forthcoming Publications</h2>
+
         <ol class="pubs">
           <li>
             Muzaffari, M., et al. “Machine Learning for On-Orbit Anomaly Detection.”
@@ -250,11 +269,17 @@
       </div>
     </section>
 
-    <!-- ===== Teaching ===== -->
+
+
+    <!-- =========================
+         TEACHING
+         ========================= -->
     <section id="teaching" class="section">
       <div class="container">
         <h2>Teaching & Mentorship</h2>
+
         <ul class="timeline">
+
           <li>
             <span class="time">2025</span>
             <div class="entry">
@@ -262,65 +287,81 @@
               <p>Led MATLAB recitations: rigid body dynamics, attitude kinematics, and control.</p>
             </div>
           </li>
+
           <li>
             <span class="time">2024</span>
             <div class="entry">
               <h3>Dynamic Systems (TA)</h3>
-              <p>Led MATLAB/Simulink recitations: system modeling, transfer functions, and frequency response.</p>
+              <p>Led MATLAB/Simulink recitations: system modeling, transfer functions, frequency response.</p>
             </div>
           </li>
+
         </ul>
       </div>
     </section>
 
-    <!-- ===== Contact ===== -->
+
+
+    <!-- =========================
+         CONTACT
+         ========================= -->
     <section id="contact" class="section alt">
       <div class="container">
-        <div class="contact-center">
-          <h2>Get in touch</h2>
-          <!-- Social/contact icon row -->
-          <ul class="contact-icons">
-            <li>
-              <a href="mailto:mehdimuzaffari@gmail.com" aria-label="Email">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://scholar.google.com/citations?user=V0W9A70AAAAJ&hl=en&authuser=1" target="_blank"
-                rel="noopener" aria-label="Google Scholar">
-                <i class="fas fa-graduation-cap"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/mehdimuz" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/mehdimuz" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/apexorbital" target="_blank" rel="noopener" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/apexorbital/" target="_blank" rel="noopener" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <h2>Get in touch</h2>
+
+        <ul class="contact-icons">
+
+          <li>
+            <a href="mailto:mehdimuzaffari@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://scholar.google.com/citations?user=V0W9A70AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <i class="fas fa-graduation-cap"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/mehdimuz" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://linkedin.com/in/mehdimuz" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://x.com/apexorbital" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/apexorbital/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+
+        </ul>
       </div>
     </section>
+
   </main>
 
-  <!-- ===== Footer ===== -->
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Mehdi Muzaffari. All rights reserved.</p>
+
       <nav aria-label="Footer">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -331,12 +372,13 @@
       </nav>
     </div>
 
-    <!-- Minimal inline script to keep the year current -->
+    <!-- Auto-updating year -->
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
-</body>
 
+
+
+</body>
 </html>
-< Test push from WSL -->
