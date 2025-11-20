@@ -1,7 +1,7 @@
 /* =========================================================
-   DESIGN TOKENS / BASE THEME
-   Centralized variables for colors, spacing, radii, shadows
-   ========================================================= */
+DESIGN TOKENS / BASE THEME
+Centralized variables for colors, spacing, radii, shadows
+========================================================= */
 :root {
   --bg: #000000;                /* page background (pure black) */
   --panel: #11151f;             /* panel/card background */
@@ -11,17 +11,17 @@
   --brand-2: #7af0d9;           /* secondary accent (teal) */
   --border: #1d2330;            /* subtle separators */
   --pill: #1a2233;              /* chip/pill background */
-
+  
   --radius: 16px;               /* default corner radius */
   --shadow: 0 10px 30px rgba(0, 0, 0, .3); /* soft drop shadow */
-
+  
   --maxw: 1120px;               /* max readable content width */
 }
 
 /* =========================================================
-   GLOBAL RESET / ROOT ELEMENTS
-   Box model, full-height root, base typography
-   ========================================================= */
+GLOBAL RESET / ROOT ELEMENTS
+Box model, full-height root, base typography
+========================================================= */
 *,
 *::before,
 *::after {
@@ -34,32 +34,32 @@ body {
 }
 
 /* Base body styles
-   - Font stack
-   - Text color
-   - Background (solid, with optional gradient variant)
-   - Line-height
+- Font stack
+- Text color
+- Background (solid, with optional gradient variant)
+- Line-height
 */
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
   line-height: 1.6;
-
+  
   /* Solid background (current choice) */
   background: var(--bg);
-
+  
   /* Optional gradient background — uncomment to use instead:
   background:
-    radial-gradient(1200px 600px at 70% -10%, rgba(74,168,255,.15), transparent 60%),
-    radial-gradient(800px 400px at -10% 10%, rgba(122,240,217,.12), transparent 60%),
-    var(--bg);
+  radial-gradient(1200px 600px at 70% -10%, rgba(74,168,255,.15), transparent 60%),
+  radial-gradient(800px 400px at -10% 10%, rgba(122,240,217,.12), transparent 60%),
+  var(--bg);
   */
 }
 
 /* =========================================================
-   LAYOUT HELPERS
-   Container for max-width and horizontal padding
-   ========================================================= */
+LAYOUT HELPERS
+Container for max-width and horizontal padding
+========================================================= */
 .container {
   width: 100%;
   max-width: var(--maxw);
@@ -68,9 +68,9 @@ body {
 }
 
 /* =========================================================
-   LINKS & BUTTONS
-   Basic anchors + primary / ghost / outline buttons
-   ========================================================= */
+LINKS & BUTTONS
+Basic anchors + primary / ghost / outline buttons
+========================================================= */
 a {
   color: var(--brand);
   text-decoration: none;
@@ -109,9 +109,9 @@ a:hover {
 }
 
 /* =========================================================
-   ACCESSIBILITY
-   Skip link for keyboard users to jump to main content
-   ========================================================= */
+ACCESSIBILITY
+Skip link for keyboard users to jump to main content
+========================================================= */
 .skip-link {
   position: absolute;
   left: -9999px;                /* visually hidden off-canvas */
@@ -127,9 +127,9 @@ a:hover {
 }
 
 /* =========================================================
-   HEADER / NAVIGATION
-   Sticky, glassy header with brand + nav
-   ========================================================= */
+HEADER / NAVIGATION
+Sticky, glassy header with brand + nav
+========================================================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -225,9 +225,9 @@ a:hover {
 }
 
 /* =========================================================
-   HERO SECTION
-   Two-column layout: text + visual
-   ========================================================= */
+HERO SECTION
+Two-column layout: text + visual
+========================================================= */
 .hero {
   padding: 5rem 0 3rem;
   border-bottom: 1px solid var(--border);
@@ -264,22 +264,26 @@ a:hover {
 }
 
 /* =========================================================
-   EARTH VISUAL
-   Simple flex container for Earth image
-   ========================================================= */
+EARTH VISUAL
+Simple flex container for Earth image
+========================================================= */
 .earth-container {
   display: flex;
+  justify-content: flex-end;     /* push globe to the right inside its column */
 }
 
+/* optional small extra nudge */
 .earth-container img {
   max-width: 100%;
   height: auto;
+  transform: translateX(60px);   /* tweak: 5–20px to taste */
 }
 
+
 /* =========================================================
-   GENERIC SECTIONS
-   Shared spacing + section-specific borders
-   ========================================================= */
+GENERIC SECTIONS
+Shared spacing + section-specific borders
+========================================================= */
 .section {
   padding: 3rem 0;              /* vertical rhythm between sections */
 }
@@ -307,9 +311,9 @@ a:hover {
 }
 
 /* =========================================================
-   GRID & CARD SYSTEM
-   Responsive grids and content cards
-   ========================================================= */
+GRID & CARD SYSTEM
+Responsive grids and content cards
+========================================================= */
 .grid {
   display: grid;
   gap: 2rem;
@@ -377,9 +381,9 @@ a:hover {
 }
 
 /* =========================================================
-   MEDIA BLOCKS (IMAGES / VIDEO)
-   Shared styles for card media and attractor strip
-   ========================================================= */
+MEDIA BLOCKS (IMAGES / VIDEO)
+Shared styles for card media and attractor strip
+========================================================= */
 
 /* Generic media slot for cards (images or video) */
 /* Override ONLY for attractor card */
@@ -427,9 +431,9 @@ a:hover {
 }
 
 /* =========================================================
-   UTILITIES
-   Tags, chips, pills, bullets, and inline links
-   ========================================================= */
+UTILITIES
+Tags, chips, pills, bullets, and inline links
+========================================================= */
 .tags,
 .chip-row {
   display: flex;
@@ -468,8 +472,8 @@ a:hover {
 }
 
 /* =========================================================
-   META LIST (ABOUT / CONTACT KEY-VALUE)
-   ========================================================= */
+META LIST (ABOUT / CONTACT KEY-VALUE)
+========================================================= */
 .meta {
   list-style: none;
   padding: 0;
@@ -490,9 +494,9 @@ a:hover {
 }
 
 /* =========================================================
-   CONTACT ICONS
-   Centered row of social / contact icons
-   ========================================================= */
+CONTACT ICONS
+Centered row of social / contact icons
+========================================================= */
 .contact-icons {
   list-style: none;
   display: flex;
@@ -518,8 +522,8 @@ a:hover {
 }
 
 /* =========================================================
-   PUBLICATIONS LIST
-   ========================================================= */
+PUBLICATIONS LIST
+========================================================= */
 .pubs {
   counter-reset: pubs;
   padding-left: 1.25rem;
@@ -534,9 +538,9 @@ a:hover {
 }
 
 /* =========================================================
-   TIMELINE
-   Badge-like year labels + entries
-   ========================================================= */
+TIMELINE
+Badge-like year labels + entries
+========================================================= */
 .timeline {
   list-style: none;
   padding: 0;
@@ -558,9 +562,9 @@ a:hover {
 }
 
 /* =========================================================
-   FORMS
-   Label/input spacing, focus ring, and hints
-   ========================================================= */
+FORMS
+Label/input spacing, focus ring, and hints
+========================================================= */
 .form label {
   display: grid;
   gap: .35rem;
@@ -589,8 +593,8 @@ a:hover {
 }
 
 /* =========================================================
-   FOOTER
-   ========================================================= */
+FOOTER
+========================================================= */
 .site-footer {
   border-top: 1px solid var(--border);
   background: #0a0d14;
@@ -614,9 +618,9 @@ a:hover {
 }
 
 /* =========================================================
-   RESPONSIVE BREAKPOINTS
-   Layout shifts at 980px and 720px
-   ========================================================= */
+RESPONSIVE BREAKPOINTS
+Layout shifts at 980px and 720px
+========================================================= */
 @media (max-width: 980px) {
   .hero-inner {
     grid-template-columns: 1fr;     /* stack hero */
@@ -654,7 +658,7 @@ a:hover {
     top: 64px;
     width: min(92vw, 360px);
   }
-
+  
   /* Footer stacks on small screens */
   .footer-inner {
     flex-direction: column;
@@ -664,9 +668,9 @@ a:hover {
 }
 
 /* =========================================================
-   REDUCED MOTION
-   Respect user motion preferences
-   ========================================================= */
+REDUCED MOTION
+Respect user motion preferences
+========================================================= */
 @media (prefers-reduced-motion: no-preference) {
   .button {
     transition: filter .2s ease;
@@ -676,32 +680,32 @@ a:hover {
   input,
   textarea {
     transition: border-color .2s ease,
-                box-shadow .2s ease,
-                background .2s ease;
+    box-shadow .2s ease,
+    background .2s ease;
   }
 }
 
 /* =========================================================
-   DEBUG UTILITIES (OPTIONAL)
-   Enable during layout debugging only
-   ========================================================= */
+DEBUG UTILITIES (OPTIONAL)
+Enable during layout debugging only
+========================================================= */
 /*
 * {
-  outline: 1px solid rgba(95, 60, 60, 0.5);
+outline: 1px solid rgba(95, 60, 60, 0.5);
 }
 
 section::after {
-  content: attr(id);                // shows the section’s ID
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(255, 0, 0, 0.8);
-  color: #fff;
-  font-size: 12px;
-  padding: 2px 4px;
+content: attr(id);                // shows the section’s ID
+position: absolute;
+top: 0;
+left: 0;
+background: rgba(255, 0, 0, 0.8);
+color: #fff;
+font-size: 12px;
+padding: 2px 4px;
 }
 
 section {
-  position: relative;               // so the ::after stays inside
+position: relative;               // so the ::after stays inside
 }
 */
