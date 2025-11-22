@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/mehdimuz/projects/website/scripts/media/videos/globe_manim/1080p30/partial_movie_files/RotatingGlobe/2539438533_2210304749_3098834846.mp4'
-file 'file:/home/mehdimuz/projects/website/scripts/media/videos/globe_manim/1080p30/partial_movie_files/RotatingGlobe/1410396743_3515533520_3589324407.mp4'
