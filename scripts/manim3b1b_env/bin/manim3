@@ -1,0 +1,3 @@
+#!/bin/bash
+# Force direct venv manim call, bypassing system .local/bin
+/home/mehdimuz/projects/website/scripts/manim3b1b_env/bin/python -m manimlib "$@"
