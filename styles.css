@@ -725,3 +725,47 @@ DEBUG UTILITIES (OPTIONAL)
 outline: 1px solid rgba(95, 60, 60, 0.5);
 }
 */
+
+
+
+
+
+
+
+@media (max-width: 720px) {
+
+  /* Reduce top black space */
+  .hero {
+    padding: 2.2rem 1.25rem 1.75rem;
+  }
+
+  /* Prevent tall headline stacking */
+  .hero-title {
+    max-width: 100%;
+    line-height: 1.05;
+  }
+
+  /* Make headline readable on phone */
+  .hero-title.scientific {
+    font-size: clamp(2.1rem, 7vw, 2.6rem);
+  }
+
+  /* Stack buttons cleanly */
+  .hero-actions {
+    flex-direction: column;
+    gap: .6rem;
+  }
+
+  .hero-actions .button,
+  .hero-actions .button-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Pull the visual up */
+  .earth-container {
+    width: 85vw;
+    margin-top: .5rem;
+    transform: translateX(0);
+  }
+}
