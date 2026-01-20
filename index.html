@@ -3,24 +3,24 @@
 
 <head>
   <!-- =========================
-       META & HEAD SETTINGS
-       ========================= -->
+  META & HEAD SETTINGS
+  ========================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  
   <title>ApexOrbital</title>
   <meta name="description" content="ApexOrbital: cinematic physics simulations, chaos visuals, and numerical experiments by Mehdi Muzaffari." />
-
+  
   <!-- Cache busting to prevent stale files -->
   <meta http-equiv="Cache-Control" content="no-store, max-age=0">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css?v=2025-08-25-2" />
   <link rel="icon" href="favicon.ico?v=2025-08-25-1" />
@@ -28,30 +28,30 @@
 </head>
 
 <body>
-
+  
   <!-- =========================
-       ACCESSIBILITY: SKIP LINK
-       ========================= -->
+  ACCESSIBILITY: SKIP LINK
+  ========================= -->
   <a class="skip-link" href="#main">Skip to content</a>
-
+  
   <!-- =========================
-       HEADER / NAVIGATION
-       ========================= -->
+  HEADER / NAVIGATION
+  ========================= -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-
+      
       <!-- Brand logo -->
       <a class="brand" href="#">
         <img src="./images/logo.png?v=2025-08-25-1" alt="ApexOrbital logo" class="brand-logo">
         <span class="brand-text">ApexOrbital</span>
       </a>
-
+      
       <!-- Mobile navigation toggle (checkbox hack) -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
       <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
         <span></span><span></span><span></span>
       </label>
-
+      
       <!-- Primary navigation links -->
       <nav class="site-nav" role="navigation" aria-label="Primary">
         <ul>
@@ -62,82 +62,96 @@
           <!-- kept simple on purpose – no CV, no publications -->
         </ul>
       </nav>
-
+      
     </div>
   </header>
-
+  
   <!-- =========================
-       MAIN CONTENT WRAPPER
-       ========================= -->
+  MAIN CONTENT WRAPPER
+  ========================= -->
   <main id="main">
-
+    
     <!-- =========================
-         HERO SECTION
-         ========================= -->
+    HERO SECTION
+    ========================= -->
     <section class="hero">
       <div class="container hero-inner">
-
+        
         <!-- Hero text content -->
         <div class="hero-copy">
-          <h1>Where Mathematics Becomes Motion</h1>
+          <!-- <h1 class="hero-title scientific">Where Mathematics<br>Becomes Motion</h1> -->
 
+
+          <h1 class="hero-title scientific">
+            Where <span class="accent">Mathematics</span><br>
+            Becomes Motion
+          </h1>
+
+          
           <p class="lead">
             <em>
-              ApexOrbital creates cinematic physics simulations — turning chaotic systems,
-              differential equations, and numerical experiments into visual stories you can feel.
+              ApexOrbital creates cinematic physics simulations, visual stories you can feel.
             </em>
           </p>
-
+          
           <div class="hero-actions">
             <a class="button" href="#cinematics">Watch the Simulations</a>
             <a class="button button-ghost" href="#labs">See the Labs</a>
           </div>
         </div>
-
+        
         <!-- Hero visual -->
         <div class="earth-container">
-          <img src="images/earth3.png?v=2025-08-25-1" alt="Earth visualization">
+          <video
+          src="animations/vase.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          ></video>
         </div>
+        
       </div>
     </section>
-
+    
     <!-- =========================
-         CINEMATICS / CHAOS STRIP
-         (formerly Research)
-         ========================= -->
+    CINEMATICS / CHAOS STRIP
+    (formerly Research)
+    ========================= -->
     <section id="cinematics" class="section alt">
       <div class="container">
-
+        
         <h2>Cinematic Chaos</h2>
         <p class="lead">
           Real-time integrations of chaotic systems — rendered as smooth, looping attractors that reveal
           the hidden geometry of nonlinear dynamics.
         </p>
-
+        
         <div class="cards">
-
+          
           <!-- Attractor videos as the main showcase -->
           <article class="research-card attractor-card">
             <div class="card-media">
               <video class="attractor-video" autoplay loop muted playsinline>
                 <source src="animations/rossler_attractor.mp4" type="video/mp4">
               </video>
-
+              
               <video class="attractor-video" autoplay loop muted playsinline>
                 <source src="animations/lorenz_attractor.mp4" type="video/mp4">
               </video>
             </div>
           </article>
-
+          
         </div>
-
+        
       </div>
     </section>
-
+    
     <!-- =========================
-         SIMULATION LABS / DEMOS
-         (formerly Projects)
-         ========================= -->
+    SIMULATION LABS / DEMOS
+    (formerly Projects)
+    ========================= -->
     <section id="labs" class="section alt">
       <div class="container">
         <h2>Simulation Labs & Experiments</h2>
@@ -145,9 +159,9 @@
           Each lab starts from equations of motion or governing PDEs and ends in animation —
           blending numerical methods, control, and visualization.
         </p>
-
+        
         <div class="cards">
-
+          
           <!-- Lab 1 -->
           <article class="card project-card">
             <img src="images/adcs.png" alt="Simulation lab visualization" loading="lazy">
@@ -164,7 +178,7 @@
               <a class="card-link" href="#">Behind the Simulation →</a>
             </div>
           </article>
-
+          
           <!-- Lab 2 -->
           <article class="card project-card">
             <img src="images/angles.png" alt="Orbit / trajectory visualization" loading="lazy">
@@ -181,7 +195,7 @@
               <a class="card-link" href="#">See the Motion →</a>
             </div>
           </article>
-
+          
           <!-- Lab 3 -->
           <article class="card project-card">
             <img src="images/cfd.png" alt="Flow / field visualization" loading="lazy">
@@ -198,17 +212,17 @@
               <a class="card-link" href="#">Explore the Field →</a>
             </div>
           </article>
-
+          
         </div>
       </div>
     </section>
-
+    
     <!-- =========================
-         ABOUT SECTION
-         ========================= -->
+    ABOUT SECTION
+    ========================= -->
     <section id="about" class="section">
       <div class="container grid grid-2">
-
+        
         <!-- About text -->
         <div>
           <h2>About</h2>
@@ -221,7 +235,7 @@
             ApexOrbital is my personal studio for experimenting with cinematic simulations —
             blending high-performance computing, scientific modeling, and motion design.
           </p>
-
+          
           <!-- Keyword tags tuned to the new identity -->
           <ul class="tags">
             <li>Chaos & Dynamics</li>
@@ -231,13 +245,13 @@
             <li>Scientific Storytelling</li>
           </ul>
         </div>
-
+        
       </div>
     </section>
-
+    
     <!-- =========================
-         CONTACT
-         ========================= -->
+    CONTACT
+    ========================= -->
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Get in touch</h2>
@@ -245,58 +259,58 @@
           Collaborations, simulations, visualizations, or just to talk physics and motion —
           feel free to reach out.
         </p>
-
+        
         <ul class="contact-icons">
-
+          
           <li>
             <a href="mailto:mehdimuzaffari@gmail.com" aria-label="Email">
               <i class="fas fa-envelope"></i>
             </a>
           </li>
-
+          
           <li>
             <a href="https://scholar.google.com/citations?user=V0W9A70AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
               <i class="fas fa-graduation-cap"></i>
             </a>
           </li>
-
+          
           <li>
             <a href="https://github.com/mehdimuz" target="_blank" rel="noopener" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
           </li>
-
+          
           <li>
             <a href="https://linkedin.com/in/mehdimuz" target="_blank" rel="noopener" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
-
+          
           <li>
             <a href="https://x.com/apexorbital" target="_blank" rel="noopener" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
-
+          
           <li>
             <a href="https://www.instagram.com/apexorbital/" target="_blank" rel="noopener" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
           </li>
-
+          
         </ul>
       </div>
     </section>
-
+    
   </main>
-
+  
   <!-- =========================
-       FOOTER
-       ========================= -->
+  FOOTER
+  ========================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Mehdi Muzaffari. All rights reserved.</p>
-
+      
       <nav aria-label="Footer">
         <a href="#cinematics">Cinematics</a>
         <a href="#labs">Labs</a>
@@ -304,12 +318,12 @@
         <a href="#contact">Contact</a>
       </nav>
     </div>
-
+    
     <!-- Auto-updating year -->
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
-
+  
 </body>
 </html>

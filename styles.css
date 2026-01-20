@@ -1,7 +1,7 @@
 /* =========================================================
 DESIGN TOKENS / BASE THEME
 Centralized variables for colors, spacing, radii, shadows
-========================================================= */
+===================================================qu====== */
 :root {
   --bg: #000000;                /* page background (pure black) */
   --panel: #11151f;             /* panel/card background */
@@ -210,7 +210,7 @@ HEADER / NAVIGATION
 HERO SECTION
 ========================================================= */
 .hero {
-  padding: 5rem 0 3rem;
+  padding: 0.5rem 3rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -221,11 +221,82 @@ HERO SECTION
   grid-template-columns: 1.15fr .85fr;
 }
 
-.hero h1 {
+/* .hero h1 {
   font-size: clamp(1.9rem, 2.6vw + 1rem, 3rem);
   line-height: 1.2;
   margin: 0 0 .75rem 0;
+} */
+
+
+/* === HERO TITLE STYLES === */
+
+.hero-title {
+  margin: 0 0 1rem 0;
 }
+
+.hero-title {
+  max-width: 14ch; /* controls line length */
+}
+
+
+.hero-title .accent {
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(90deg, #ff7a6c, #7af0d9) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+
+
+
+
+.hero-title .accent {
+  display: inline-block; /* important */
+  color: transparent;
+  background-image: linear-gradient(90deg, #4aa8ff, #7af0d9);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+
+/* STYLE 1 — Scientific Authority */
+/* .hero-title.scientific {
+  font-size: clamp(2.6rem, 3.2vw + 1rem, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+} */
+
+
+.hero-title.scientific {
+  font-size: clamp(2.3rem, 2.7vw + 0.85rem, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+
+
+/* STYLE 2 — Mathematical (arrow) */
+.hero-title.math {
+  font-size: clamp(3rem, 4vw + 1rem, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+/* STYLE 3 — Cinematic Minimal */
+.hero-title.cinematic {
+  font-size: clamp(2.8rem, 3.6vw + 1rem, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+
+
+
 
 .lead {
   color: var(--muted);
@@ -239,16 +310,30 @@ HERO SECTION
   flex-wrap: wrap;
 }
 
-/* Earth visual */
+/* Vase visual */
+/* .earth-container {
+  width: 800px;
+  height: 800px;
+  max-width: 65vw;
+  max-height: 65vw;
+  transform: translateX(90px);
+} */
+
+
 .earth-container {
-  display: flex;
-  justify-content: flex-end;
+  width: min(800px, 70vw);
+  aspect-ratio: 1 / 1;
+  transform: translateX(80px);
 }
-.earth-container img {
-  max-width: 100%;
-  height: auto;
-  transform: translateX(60px);
+
+
+
+.earth-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* 👈 IMPORTANT */
 }
+
 
 /* =========================================================
 GENERIC SECTIONS
@@ -600,11 +685,18 @@ RESPONSIVE BREAKPOINTS
     align-items: flex-start;
     gap: .5rem;
   }
-
+  
   /* Bring globe back a bit on tiny screens */
-  .earth-container img {
+
+
+  /* .earth-container img {
     transform: translateX(20px);
-  }
+  } */
+
+  .earth-container {
+  transform: translateX(0);
+}
+
 }
 
 /* =========================================================
@@ -619,9 +711,9 @@ REDUCED MOTION
   input,
   textarea {
     transition:
-      border-color .2s ease,
-      box-shadow .2s ease,
-      background .2s ease;
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
   }
 }
 
@@ -630,6 +722,6 @@ DEBUG UTILITIES (OPTIONAL)
 ========================================================= */
 /*
 * {
-  outline: 1px solid rgba(95, 60, 60, 0.5);
+outline: 1px solid rgba(95, 60, 60, 0.5);
 }
 */
