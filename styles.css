@@ -3,19 +3,30 @@ DESIGN TOKENS / BASE THEME
 Centralized variables for colors, spacing, radii, shadows
 ===================================================qu====== */
 :root {
-  --bg: #000000;                /* page background (pure black) */
-  --panel: #11151f;             /* panel/card background */
-  --muted: #93a1b5;             /* secondary text color */
-  --text: #e8ecf1;              /* primary text color */
-  --brand: #4aa8ff;             /* primary accent (blue) */
-  --brand-2: #7af0d9;           /* secondary accent (teal) */
-  --border: #1d2330;            /* subtle separators */
-  --pill: #1a2233;              /* chip/pill background */
-  
-  --radius: 16px;               /* default corner radius */
-  --shadow: 0 10px 30px rgba(0, 0, 0, .3); /* soft drop shadow */
-  
-  --maxw: 1300px;               /* max readable content width */
+  --bg: #000000;
+  /* page background (pure black) */
+  --panel: #11151f;
+  /* panel/card background */
+  --muted: #93a1b5;
+  /* secondary text color */
+  --text: #e8ecf1;
+  /* primary text color */
+  --brand: #4aa8ff;
+  /* primary accent (blue) */
+  --brand-2: #7af0d9;
+  /* secondary accent (teal) */
+  --border: #1d2330;
+  /* subtle separators */
+  --pill: #1a2233;
+  /* chip/pill background */
+
+  --radius: 16px;
+  /* default corner radius */
+  --shadow: 0 10px 30px rgba(0, 0, 0, .3);
+  /* soft drop shadow */
+
+  --maxw: 1300px;
+  /* max readable content width */
 }
 
 /* =========================================================
@@ -59,6 +70,7 @@ a {
   color: var(--brand);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -73,6 +85,7 @@ a:hover {
   border: none;
   box-shadow: var(--shadow);
 }
+
 .button:hover {
   filter: brightness(1.05);
   text-decoration: none;
@@ -99,6 +112,7 @@ ACCESSIBILITY
   position: absolute;
   left: -9999px;
 }
+
 .skip-link:focus {
   left: 1rem;
   top: 1rem;
@@ -137,6 +151,7 @@ HEADER / NAVIGATION
   column-gap: .75rem;
   color: var(--text);
 }
+
 .brand:hover {
   text-decoration: none;
 }
@@ -174,11 +189,13 @@ HEADER / NAVIGATION
   margin: 0;
   padding: 0;
 }
+
 .site-nav a {
   display: inline-block;
   padding: .5rem .75rem;
   border-radius: 8px;
 }
+
 .site-nav a:hover {
   background: #0f1420;
   text-decoration: none;
@@ -199,6 +216,7 @@ HEADER / NAVIGATION
   align-items: center;
   justify-content: center;
 }
+
 .nav-toggle-btn span {
   display: block;
   height: 2px;
@@ -235,7 +253,8 @@ HERO SECTION
 }
 
 .hero-title {
-  max-width: 14ch; /* controls line length */
+  max-width: 14ch;
+  /* controls line length */
 }
 
 
@@ -253,7 +272,8 @@ HERO SECTION
 
 
 .hero-title .accent {
-  display: inline-block; /* important */
+  display: inline-block;
+  /* important */
   color: transparent;
   background-image: linear-gradient(90deg, #4aa8ff, #7af0d9);
   background-clip: text;
@@ -331,7 +351,8 @@ HERO SECTION
 .earth-container video {
   width: 100%;
   height: 100%;
-  object-fit: contain;   /* 👈 IMPORTANT */
+  object-fit: contain;
+  /* 👈 IMPORTANT */
 }
 
 
@@ -382,6 +403,7 @@ GRID & CARD SYSTEM
   padding: 1.25rem;
   box-shadow: var(--shadow);
 }
+
 .card h3 {
   margin-top: 0;
 }
@@ -447,7 +469,8 @@ MEDIA BLOCKS (IMAGES / VIDEO)
   outline: none;
   display: block;
   width: 100%;
-  max-width: 720px;        /* cap so they don’t become huge on ultra-wide monitors */
+  max-width: 720px;
+  /* cap so they don’t become huge on ultra-wide monitors */
   border-radius: 20px;
 }
 
@@ -507,6 +530,7 @@ META LIST
   padding: 0;
   margin: 0;
 }
+
 .meta li {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -514,9 +538,11 @@ META LIST
   padding: .35rem 0;
   border-bottom: 1px dashed var(--border);
 }
+
 .meta li:last-child {
   border-bottom: 0;
 }
+
 .meta span {
   color: var(--muted);
 }
@@ -534,15 +560,18 @@ CONTACT ICONS
   margin: 1rem auto 0;
   padding: 0;
 }
+
 .contact-icons li {
   margin: 0;
 }
+
 .contact-icons li a {
   font-size: 4rem;
   color: var(--text);
   transition: color .2s ease, transform .2s ease;
   max-width: 100%;
 }
+
 .contact-icons li a:hover {
   color: var(--brand);
   transform: scale(1.1);
@@ -555,7 +584,8 @@ PUBLICATIONS / TIMELINE (kept if needed later)
   counter-reset: pubs;
   padding-left: 1.25rem;
 }
-.pubs > li {
+
+.pubs>li {
   margin: .75rem 0;
 }
 
@@ -570,6 +600,7 @@ PUBLICATIONS / TIMELINE (kept if needed later)
   display: grid;
   gap: 1rem;
 }
+
 .timeline .time {
   display: inline-block;
   background: var(--pill);
@@ -579,6 +610,7 @@ PUBLICATIONS / TIMELINE (kept if needed later)
   font-size: .8rem;
   color: var(--muted);
 }
+
 .timeline .entry h3 {
   margin: .25rem 0 .25rem;
 }
@@ -634,6 +666,7 @@ FOOTER
   color: var(--muted);
   margin-left: 1rem;
 }
+
 .site-footer nav a:hover {
   color: var(--text);
 }
@@ -645,12 +678,15 @@ RESPONSIVE BREAKPOINTS
   .hero-inner {
     grid-template-columns: 1fr;
   }
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
+
   .cards {
     grid-template-columns: repeat(8, 1fr);
   }
+
   .research-card,
   .project-card {
     grid-column: span 8;
@@ -658,15 +694,18 @@ RESPONSIVE BREAKPOINTS
 }
 
 @media (max-width: 720px) {
+
   /* Mobile nav */
   .site-nav ul {
     display: none;
   }
+
   .nav-toggle-btn {
     display: inline-flex;
     justify-self: end;
   }
-  .nav-toggle:checked ~ .site-nav ul {
+
+  .nav-toggle:checked~.site-nav ul {
     display: grid;
     gap: .5rem;
     padding: .75rem;
@@ -678,14 +717,14 @@ RESPONSIVE BREAKPOINTS
     top: 64px;
     width: min(92vw, 360px);
   }
-  
+
   /* Footer stacks on small screens */
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: .5rem;
   }
-  
+
   /* Bring globe back a bit on tiny screens */
 
 
@@ -694,8 +733,8 @@ RESPONSIVE BREAKPOINTS
   } */
 
   .earth-container {
-  transform: translateX(0);
-}
+    transform: translateX(0);
+  }
 
 }
 
@@ -706,14 +745,15 @@ REDUCED MOTION
   .button {
     transition: filter .2s ease;
   }
+
   a,
   .card,
   input,
   textarea {
     transition:
-    border-color .2s ease,
-    box-shadow .2s ease,
-    background .2s ease;
+      border-color .2s ease,
+      box-shadow .2s ease,
+      background .2s ease;
   }
 }
 
@@ -726,6 +766,19 @@ outline: 1px solid rgba(95, 60, 60, 0.5);
 }
 */
 
+
+/* Featured video size control */
+#featured video {
+  max-width: 900px;
+  /* adjust this */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* center it */
+  border-radius: 12px;
+  /* optional, matches cards */
+}
 
 
 
