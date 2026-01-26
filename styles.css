@@ -781,6 +781,19 @@ outline: 1px solid rgba(95, 60, 60, 0.5);
 }
 
 
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 50px; */
+  transform: translate(60px);
+}
+
+.about-image img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+}
 
 
 
