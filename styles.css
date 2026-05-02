@@ -339,10 +339,10 @@ HERO SECTION
   transform: translateX(90px);
 } */
 
-
 .earth-container {
-  width: min(800px, 70vw);
+  width: min(700px, 50vw);
   aspect-ratio: 1 / 1;
+  margin: 0 auto;
   transform: translateX(80px);
 }
 
